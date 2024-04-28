@@ -36,7 +36,7 @@ public class EmployeeController {
 	{
 		Employee emp = empservice.getemployee(id);
 		empDTO emps = new empDTO();
-		emps.setId(emp.getId());
+		//emps.setId(emp.getId());
 		emps.setFirstname(emp.getFirstname());
 		emps.setLastname(emp.getLastname());
 		emps.setEmaild(emp.getEmaild());
@@ -56,7 +56,7 @@ public class EmployeeController {
 		empDTO empd = new empDTO();
 		for(Employee e:emplist)
 		{
-			empd.setId(e.getId());
+			//empd.setId(e.getId());
 			empd.setFirstname(e.getFirstname());
 			empd.setLastname(e.getLastname());
 			empd.setEmaild(e.getEmaild());
@@ -79,7 +79,7 @@ public class EmployeeController {
 	{
 		Employee emp1 = empservice.addEmployee(emp);
 		empDTO emp2 = new empDTO();
-		emp2.setId(emp1.getId());
+		//emp2.setId(emp1.getId());
 		emp2.setFirstname(emp1.getFirstname());
 		emp2.setLastname(emp1.getLastname());
 		emp2.setEmaild(emp1.getEmaild());
@@ -92,7 +92,7 @@ public class EmployeeController {
 	{
 		Employee emp1= empservice.updateemployee(id, emp);
 		empDTO emp2 = new empDTO();
-		emp2.setId(emp1.getId());
+		//emp2.setId(emp1.getId());
 		emp2.setFirstname(emp1.getFirstname());
 		emp2.setLastname(emp1.getLastname());
 		emp2.setEmaild(emp1.getEmaild());
