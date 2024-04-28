@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.employee.EMS.DTO.empDTO;
 import com.employee.EMS.Entity.Employee;
@@ -32,7 +33,7 @@ public class EmployeeController {
 
 	
 	@GetMapping("/{id}")
-	public empDTO getsingle(@RequestParam long id )
+	public empDTO getsingle(@PathVariable long id )
 	{
 		Employee emp = empservice.getemployee(id);
 		empDTO emps = new empDTO();
@@ -70,7 +71,7 @@ public class EmployeeController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deletesingle(@RequestParam long id)
+	public void deletesingle(@PathVariable long id)
 	{
 		 empservice.deletemployee(id);
 	}
@@ -88,7 +89,7 @@ public class EmployeeController {
 	}
 	
 	@PutMapping("/update/{id}")
-	public empDTO updateemp(@RequestBody Employee emp, @RequestParam long id)
+	public empDTO updateemp(@RequestBody Employee emp, @PathVariable long id)
 	{
 		Employee emp1= empservice.updateemployee(id, emp);
 		empDTO emp2 = new empDTO();
