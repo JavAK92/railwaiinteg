@@ -15,7 +15,7 @@ import lombok.Setter;
 public class empDTO {
 	
 	
-	//private long id;
+	private long id;
 	private String firstname;
 	private String lastname;
 	private String emaild;
