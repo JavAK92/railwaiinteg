@@ -20,7 +20,7 @@ import com.employee.EMS.service.EmployeeService;
 @RequestMapping("/api/v4/employee")
 public class EmployeeController {
 	
-	List<empDTO> empdlist;
+	List<empDTO> empdlist=new ArrayList<empDTO>();
 
 	private EmployeeService empservice;
 	
